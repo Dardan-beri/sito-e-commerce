@@ -1,0 +1,23 @@
+{
+  "builds": [
+    {
+      "src": "DjangoProject/wsgi.py",
+      "use": "@vercel/python",
+      "configure": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12",
+        "buildCommand": "bash setup.sh"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "DjangoProject/wsgi.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    }
+  ]
+}
