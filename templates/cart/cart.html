@@ -231,7 +231,7 @@
 <div class="cart-container">
   <div class="cart-card">
     <div class="cart-header">
-      <h2><i class="fas fa-shopping-cart me-2"></i>Il tuo carrello</h2>
+      <h2><i class="fas fa-shopping-cart me-2"></i>Your cart</h2>
     </div>
 
     {% if cart_items %}
@@ -241,32 +241,32 @@
             <div class="cart-item-details">
               <h5 class="cart-item-name">{{ item.product.name }}</h5>
               <div class="cart-item-meta">
-                <span><i class="fas fa-box-open me-1"></i> Quantità: {{ item.quantity }}</span>
+                <span><i class="fas fa-box-open me-1"></i> Quantity: {{ item.quantity }}</span>
                 
                 {% if item.product.is_discounted and item.product.discounted_price %}
                   <span>
-                    <i class="fas fa-tag me-1"></i> Prezzo unitario: 
+                    <i class="fas fa-tag me-1"></i> Unitary price: 
                     <span class="text-danger fw-bold">{{ item.product.discounted_price }} €</span>
                     <span class="text-muted text-decoration-line-through ms-1 small">{{ item.product.price }} €</span>
                   </span>
                   <span class="cart-item-price">
-                    <i class="fas fa-receipt me-1"></i> Totale: {{ item.get_total_discounted_price|floatformat:2 }} €
+                    <i class="fas fa-receipt me-1"></i> Total: {{ item.get_total_discounted_price|floatformat:2 }} €
                   </span>
                 {% else %}
-                  <span><i class="fas fa-tag me-1"></i> Prezzo unitario: {{ item.product.price }} €</span>
-                  <span class="cart-item-price"><i class="fas fa-receipt me-1"></i> Totale: {{ item.get_total_price|floatformat:2 }} €</span>
+                  <span><i class="fas fa-tag me-1"></i> Unitary price: {{ item.product.price }} €</span>
+                  <span class="cart-item-price"><i class="fas fa-receipt me-1"></i> Total: {{ item.get_total_price|floatformat:2 }} €</span>
                 {% endif %}
               </div>
             </div>
             <a href="{% url 'cart:remove_from_cart' item.id %}" class="btn btn-danger">
-              <i class="fas fa-trash-alt"></i> Rimuovi
+              <i class="fas fa-trash-alt"></i> Remove
             </a>
           </div>
         {% endfor %}
       </div>
 
       <div class="cart-total">
-        Totale ordine: <strong>{{ total|floatformat:2 }} €</strong>
+        Order total: <strong>{{ total|floatformat:2 }} €</strong>
       </div>
 
       <div class="action-buttons">

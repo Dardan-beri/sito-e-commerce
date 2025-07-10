@@ -160,9 +160,9 @@
 
                     <p class="card-text">
                       {% if product.quantity_available > 0 %}
-                        Disponibili: {{ product.quantity_available }}
+                        Available: {{ product.quantity_available }}
                       {% else %}
-                        <span class="text-danger">Non disponibile</span>
+                        <span class="text-danger">Not available</span>
                       {% endif %}
                     </p>
 
@@ -171,13 +171,13 @@
                         {% if product.quantity_available > 0 %}
                           <button class="btn btn-primary w-100 add-to-cart-btn"
                                   data-product-id="{{ product.id }}">
-                            Aggiungi al carrello
+                            Add to cart
                           </button>
                         {% else %}
-                          <button class="btn btn-secondary w-100" disabled>Non disponibile</button>
+                          <button class="btn btn-secondary w-100" disabled>Not available</button>
                         {% endif %}
                       {% else %}
-                        <a href="{% url 'login' %}" class="btn btn-warning w-100">Effettua il login per acquistare</a>
+                        <a href="{% url 'login' %}" class="btn btn-warning w-100">Log in to purchase</a>
                       {% endif %}
                     </div>
                   </div>
@@ -198,7 +198,7 @@
             const productId = this.dataset.productId;
             const originalText = this.textContent;
             this.disabled = true;
-            this.textContent = "Aggiungendo...";
+            this.textContent = "Adding...";
 
             try {
               const response = await fetch(`/cart/add/${productId}/`, {
@@ -220,7 +220,7 @@
                 }
 
                 // Feedback visivo
-                this.textContent = "✓ Aggiunto!";
+                this.textContent = "✓ Added to cart!";
                 this.classList.replace('btn-primary', 'btn-success');
 
                 setTimeout(() => {
@@ -234,10 +234,10 @@
                   window.location.reload();
                 }, 1000);
               } else {
-                throw new Error(data.message || "Errore durante l'aggiunta al carrello");
+                throw new Error(data.message || "Error while adding the item");
               }
             } catch (error) {
-              console.error("Errore:", error);
+              console.error("Error:", error);
               alert(error.message);
               this.textContent = originalText;
               this.disabled = false;

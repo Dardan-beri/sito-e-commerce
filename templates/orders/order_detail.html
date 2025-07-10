@@ -171,7 +171,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2 class="mb-0">
           <i class="fas fa-receipt me-2"></i>
-          Ordine #{{ order.id }}
+          Order #{{ order.id }}
         </h2>
         <span class="order-status {% if order.is_cancelled %}status-cancelled{% else %}status-confirmed{% endif %}">
           {% if order.is_cancelled %}
@@ -187,9 +187,9 @@
       <div class="order-info">
         <div class="row">
           <div class="col-md-6">
-            <h5 class="fw-bold mb-3"><i class="fas fa-info-circle me-2"></i>Order informations</h5>
-            <p><strong><i class="far fa-calendar-alt me-2"></i>Data:</strong> {{ order.created_at|date:"d/m/Y H:i" }}</p>
-            <p><strong><i class="fas fa-user me-2"></i>Cliente:</strong> {{ order.user.username }}</p>
+            <h5 class="fw-bold mb-3"><i class="fas fa-info-circle me-2"></i>Order information</h5>
+            <p><strong><i class="far fa-calendar-alt me-2"></i>Date:</strong> {{ order.created_at|date:"d/m/Y H:i" }}</p>
+            <p><strong><i class="fas fa-user me-2"></i>Client:</strong> {{ order.user.username }}</p>
           </div>
           <div class="col-md-6 text-md-end">
             <h5 class="fw-bold mb-3"><i class="fas fa-receipt me-2"></i>Total</h5>
@@ -203,7 +203,7 @@
         <table class="product-table">
           <thead>
             <tr>
-              <th>Prodotto</th>
+              <th>Product</th>
               <th class="text-center">Quantity</th>
               <th class="text-end">Unitary price</th>
               <th class="text-end">Total</th>
