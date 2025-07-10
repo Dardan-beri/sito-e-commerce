@@ -37,9 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orders',
+    'cart',
     'users',
     'store',
-    'order_service',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
