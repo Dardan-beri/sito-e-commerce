@@ -5,34 +5,23 @@ La pagina principale è la home dove si potrà visualizzare e acquistare i prodo
 Per acquistare prodotti si deve aver eseguito il login.
 Se non si ha un account, allora serve registrare l'account in cui verrà chiesto di inserire:
 
-username
-
-nome
-
-cognome
-
-indirizzo
-
-indirizzo mail
-
-password
+- username
+- nome
+- cognome
+- indirizzo
+- indirizzo mail
+- password
 
 👥 Account già creati
 utente1 con password mazzo2002
-
 utente2 con password mazzo2002
-
 admin con password admin
-
 moderator con password moderator
-
 store_manager con password manager
 
 🔐 Permessi degli account
 moderator è un membro staff e ha i permessi da moderatore per visualizzare e modificare gli utenti
-
 store_manager è un membro staff con i permessi per visualizzare e modificare in qualsiasi modo i prodotti, ordini e carrelli
-
 admin ha tutti i permessi
 
 🛍️ Acquisto e ordini
