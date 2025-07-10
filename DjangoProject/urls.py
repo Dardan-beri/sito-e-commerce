@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import path, include
-from DjangoProject.views import index
 from store.views import home_view
 from users import views as user_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,3 +15,5 @@ urlpatterns = [
     path("cart/", include("cart.urls")),
     path("orders/", include("orders.urls")),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
