@@ -166,7 +166,7 @@
     <div class="card-header">
       <h2 class="mb-0">
         <i class="fas fa-history me-2"></i>
-        I tuoi ordini
+        Your orders
       </h2>
     </div>
     
@@ -176,10 +176,10 @@
         <table class="orders-table">
           <thead>
             <tr>
-              <th>Ordine</th>
-              <th>Data</th>
-              <th>Totale</th>
-              <th>Stato</th>
+              <th>Order</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>State</th>
               <th></th>
             </tr>
           </thead>
@@ -198,15 +198,15 @@
               <td>
                 <span class="order-status {% if order.is_cancelled %}status-cancelled{% else %}status-confirmed{% endif %}">
                   {% if order.is_cancelled %}
-                    <i class="fas fa-times-circle me-1"></i> Cancellato
+                    <i class="fas fa-times-circle me-1"></i> Cancelled
                   {% else %}
-                    <i class="fas fa-check-circle me-1"></i> Confermato
+                    <i class="fas fa-check-circle me-1"></i> Confirmed
                   {% endif %}
                 </span>
               </td>
               <td class="text-end">
                 <a href="{% url 'orders:order_detail' order.id %}" class="btn btn-details text-white">
-                  <i class="fas fa-eye me-1"></i> Dettagli
+                  <i class="fas fa-eye me-1"></i> Details
                 </a>
               </td>
             </tr>
@@ -219,8 +219,8 @@
         <div class="d-flex align-items-center">
           <i class="fas fa-info-circle fa-2x me-3" style="color: var(--info-color);"></i>
           <div>
-            <h5 class="mb-1">Nessun ordine trovato</h5>
-            <p class="mb-0">Non hai ancora effettuato ordini nel nostro store.</p>
+            <h5 class="mb-1">No order was found</h5>
+            <p class="mb-0">You have yet to place an order in our store.</p>
           </div>
         </div>
       </div>
