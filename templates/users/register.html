@@ -156,6 +156,48 @@
               </div>
             {% endif %}
           </div>
+        
+        <!-- First Name Field -->
+        <div class="form-group">
+            <label for="id_first_name" class="form-label">First Name</label>
+            <input type="text" name="first_name" id="id_first_name" class="form-control" required
+                   placeholder="Enter your first name">
+            {% if form.first_name.errors %}
+                <div class="text-danger mt-1">
+                    {% for error in form.first_name.errors %}
+                        <small>{{ error }}</small>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <!-- Last Name Field -->
+        <div class="form-group">
+            <label for="id_last_name" class="form-label">Last Name</label>
+            <input type="text" name="last_name" id="id_last_name" class="form-control" required
+                   placeholder="Enter your last name">
+            {% if form.last_name.errors %}
+                <div class="text-danger mt-1">
+                    {% for error in form.last_name.errors %}
+                        <small>{{ error }}</small>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <!-- Address Field -->
+        <div class="form-group">
+            <label for="id_address" class="form-label">Address</label>
+            <textarea name="address" id="id_address" class="form-control" rows="3" required
+                      placeholder="Enter your full address"></textarea>
+            {% if form.address.errors %}
+                <div class="text-danger mt-1">
+                    {% for error in form.address.errors %}
+                        <small>{{ error }}</small>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
 
           <!-- Email Field -->
           <div class="form-group">
