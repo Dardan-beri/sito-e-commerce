@@ -16,8 +16,8 @@ Se non si ha un account, allora serve registrare l'account in cui verrà chiesto
 - utente1 con password mazzo2002
 - utente2 con password mazzo2002
 - admin con password admin
-- moderator con password moderator
-- store_manager con password manager
+- moderator con password admin
+- store_manager con password admin
 
 🔐 Permessi degli account
 moderator è un membro staff e ha i permessi da moderatore per visualizzare e modificare gli utenti
