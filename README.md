@@ -33,3 +33,5 @@ Se si vuole visualizzare gli ordini, è possibile andare alla pagina della lista
 ❌ Annullamento ordine
 È possibile annullare un ordine.
 Quando un ordine viene annullato, i prodotti tornano in stock.
+
+Link del sito: https://ppm-ecommerce.onrender.com
